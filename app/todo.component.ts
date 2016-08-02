@@ -18,7 +18,7 @@ import { SearchBox } from './search-box.component';
 
     <button (click)="onMouseOver()">Add</button>
     <button (mouseover)="onClick($event, todoModel.title)">click me</button>
-    <div>I'm a todo input</div>`
+    `
 })
 export class TodoInput{
 	
@@ -28,8 +28,6 @@ export class TodoInput{
 	}
 
 	onMouseOver(){
-		this.todoService.addTodo(this.todoModel);
-		console.log(this.todoService.todos);
 	}
 
 	onSubmit(){

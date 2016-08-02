@@ -19,8 +19,6 @@ var TodoList = (function () {
         console.log(todoService);
     }
     TodoList.prototype.onMouseOver = function (value) {
-        this.todoService.addTodo(this.todoModel);
-        console.log(this.todoService.todos);
     };
     TodoList.prototype.onClick = function (event, value) {
         console.log(event, value);
@@ -38,7 +36,7 @@ var TodoList = (function () {
             selector: 'todo-list',
             pipes: [started_pipe_1.StartedPipe, search_pipe_1.SearchPipe],
             directives: [todo_item_renderer_component_1.TodoItemRenderer],
-            template: "\n    <div>\n    \t<ul>\n    \t\t<li *ngFor=\"let todo of todoService.todos | started : status | search : term\">\n    \t\t\t<todo-item-renderer [todo]=\"todo\"\n    \t\t\t\t(toggle)=\"todoService.toggleTodo($event)\"\n    \t\t\t></todo-item-renderer>\n    \t\t</li>\n    \t</ul>\n    </div>\n    <div class=\"completed\">{{todoService.todos}}</div>\n    "
+            template: "\n    <div>\n    \t<ul>\n    \t\t<li *ngFor=\"let todo of todoService.todos | started : status | search : term\">\n    \t\t\t<todo-item-renderer [todo]=\"todo\"\n    \t\t\t\t(toggle)=\"todoService.toggleTodo($event)\"\n    \t\t\t></todo-item-renderer>\n    \t\t</li>\n    \t</ul>\n    </div>\n    "
         }), 
         __metadata('design:paramtypes', [todo_service_1.TodoService])
     ], TodoList);

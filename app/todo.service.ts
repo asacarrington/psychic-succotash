@@ -6,8 +6,8 @@ export class TodoService{
 	todos = [
 		new TodoModel("eat"),
 		new TodoModel("sleep"),
-		new TodoModel("code")
-		new TodoModel("smooze")
+		new TodoModel("code"),
+		new TodoModel("smooze"),
 		new TodoModel("smooores")
 	];
 

@@ -21,8 +21,6 @@ var TodoInput = (function () {
         console.log(todoService);
     }
     TodoInput.prototype.onMouseOver = function () {
-        this.todoService.addTodo(this.todoModel);
-        console.log(this.todoService.todos);
     };
     TodoInput.prototype.onSubmit = function () {
         this.todoService.addTodo(this.todoModel);
@@ -36,7 +34,7 @@ var TodoInput = (function () {
         core_1.Component({
             selector: 'todo-input',
             directives: [todo_list_component_1.TodoList, status_selector_component_1.StatusSelector, search_box_component_1.SearchBox],
-            template: "\n    <search-box (update)=\"myterm = $event\"></search-box>\n \t<status-selector (select)=\"mystatus = $event\"></status-selector>\n    <todo-list [status]=\"mystatus\" [term]=\"myterm\"></todo-list>\n    <form (submit)=\"onSubmit()\">\n    <input type=\"text\" [(ngModel)]=\"todoModel.title\">\n    </form>\n\n    <button (click)=\"onMouseOver()\">Add</button>\n    <button (mouseover)=\"onClick($event, todoModel.title)\">click me</button>\n    <div>I'm a todo input</div>"
+            template: "\n    <search-box (update)=\"myterm = $event\"></search-box>\n \t<status-selector (select)=\"mystatus = $event\"></status-selector>\n    <todo-list [status]=\"mystatus\" [term]=\"myterm\"></todo-list>\n    <form (submit)=\"onSubmit()\">\n    <input type=\"text\" [(ngModel)]=\"todoModel.title\">\n    </form>\n\n    <button (click)=\"onMouseOver()\">Add</button>\n    <button (mouseover)=\"onClick($event, todoModel.title)\">click me</button>\n    "
         }), 
         __metadata('design:paramtypes', [todo_service_1.TodoService])
     ], TodoInput);

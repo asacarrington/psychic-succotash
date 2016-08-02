@@ -18,7 +18,6 @@ import { SearchPipe } from './search.pipe';
     		</li>
     	</ul>
     </div>
-    <div class="completed">{{todoService.todos}}</div>
     `
 })
 export class TodoList{
@@ -29,8 +28,6 @@ export class TodoList{
 	}
 
 	onMouseOver(value){
-		this.todoService.addTodo(this.todoModel);
-		console.log(this.todoService.todos);
 	}
 
 	onClick(event, value){

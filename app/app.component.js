@@ -17,7 +17,7 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             directives: [todo_component_1.TodoInput],
-            template: "\n  \t<h1><todo-input></todo-input>My First Angular 23App</h1>\n  "
+            template: "\n  \t<h1>ToDo Ang 2 Demo Application</h1><br/><todo-input></todo-input>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

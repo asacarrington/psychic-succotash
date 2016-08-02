@@ -5,7 +5,7 @@ import { TodoInput } from './todo.component';
   selector: 'my-app',
   directives:[TodoInput],
   template: `
-  	<h1><todo-input></todo-input>My First Angular 23App</h1>
+  	<h1>ToDo Ang 2 Demo Application</h1><br/><todo-input></todo-input>
   `
 })
 export class AppComponent { 
